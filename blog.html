@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NovoTech Blog</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link href="img/new_logo.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    /* Blog-specific styles */
+    .blog-header {
+      background: url('img/blog-banner.jpg') center center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 15px;
+    }
+    .blog-header h1 {
+      font-size: 58px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    .blog-card {
+      border: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .blog-card .card-body {
+      padding: 20px;
+    }
+    .blog-card .category {
+      font-size: 13px;
+      color: #fff;
+      background: #55c57a;
+      padding: 4px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .blog-card h5 {
+      font-size: 20px;
+      color: #333;
+      font-weight: 600;
+    }
+    .blog-card p {
+      color: #777;
+      font-size: 15px;
+    }
+    .sidebar {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 10px;
+    }
+    .sidebar h4 {
+      border-left: 5px solid #00b894;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+    .newsletter {
+      background: #f0f8f5;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .newsletter input {
+      width: 70%;
+      padding: 12px;
+      border-radius: 30px;
+      border: 1px solid #ccc;
+      outline: none;
+      margin-right: 10px;
+    }
+    .newsletter button {
+      border-radius: 30px;
+      padding: 12px 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Include -->
+  <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-7 px-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center py-3 me-3">
+          <a class="text-body px-2" href="tel:+91-9858888827"><i class="fa fa-phone-alt text-primary me-2"></i>+91-9858888827</a>
+          <a class="text-body px-2" href="mailto:novotech.consultants@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i>novotech.consultants@gmail.com</a>
+        </div>
+      </div>
+      <div class="col-lg-5 px-5 text-end">
+        <div class="h-100 d-inline-flex align-items-center py-3 me-2">
+          <a class="text-body px-2" href="#">Terms</a>
+          <a class="text-body px-2" href="#">Privacy</a>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center">
+          <a class="btn btn-sm-square btn-outline-body me-1" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-sm-square btn-outline-body me-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-sm-square btn-outline-body me-0" href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5">
+    <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+      <h3 class="text-primary m-0"><img src="img/new_logo.png" height="40px" alt=""> NovoTech</h3>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="index.html" class="nav-item nav-link">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <a href="service.html" class="nav-item nav-link">Services</a>
+        <a href="blog.html" class="nav-item nav-link active">Blog</a>
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Header -->
+  <div class="blog-header">
+    <h1>Our Insights & Stories</h1>
+    <p>Explore expert opinions, innovations, and news from NovoTech</p>
+  </div>
+
+  <!-- Blog Section -->
+  <div class="container py-5">
+    <div class="row g-5">
+      <!-- Blog Grid -->
+      <div class="col-lg-8">
+        <div class="row g-4">
+          <!-- Blog Card 1 -->
+          <div class="col-md-6">
+            <div class="card blog-card">
+              <img src="img/blog-1.jpg" alt="">
+              <div class="card-body">
+                <span class="category">Engineering</span>
+                <h5>Building Sustainable Infrastructure for the Future</h5>
+                <p>Discover how modern engineering practices are shaping eco-friendly cities worldwide.</p>
+                <a href="#" class="btn btn-link text-primary p-0">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Card 2 -->
+          <div class="col-md-6">
+            <div class="card blog-card">
+              <img src="img/blog-2.jpg" alt="">
+              <div class="card-body">
+                <span class="category">Environment</span>
+                <h5>Integrating Green Energy Solutions in Urban Design</h5>
+                <p>From solar rooftops to smart grids — see how technology drives sustainability.</p>
+                <a href="#" class="btn btn-link text-primary p-0">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Card 3 -->
+          <div class="col-md-6">
+            <div class="card blog-card">
+              <img src="img/blog-3.jpg" alt="">
+              <div class="card-body">
+                <span class="category">Digital</span>
+                <h5>How AI is Revolutionizing Engineering Design</h5>
+                <p>Artificial Intelligence is streamlining design processes like never before.</p>
+                <a href="#" class="btn btn-link text-primary p-0">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Card 4 -->
+          <div class="col-md-6">
+            <div class="card blog-card">
+              <img src="img/blog-4.jpg" alt="">
+              <div class="card-body">
+                <span class="category">Innovation</span>
+                <h5>Smart Cities: Merging Technology and Sustainability</h5>
+                <p>Learn how smart systems are transforming modern urban landscapes.</p>
+                <a href="blog_details.html" class="btn btn-link text-primary p-0">Read More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="sidebar">
+          <h4>Recent Posts</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">AI in Civil Engineering Projects</a></li>
+            <li><a href="#">Future of Smart Infrastructure</a></li>
+            <li><a href="#">Top Trends in Environmental Design</a></li>
+            <li><a href="#">How BIM Improves Collaboration</a></li>
+          </ul>
+
+          <h4 class="mt-5">Categories</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Engineering</a></li>
+            <li><a href="#">Environment</a></li>
+            <li><a href="#">Digital Innovation</a></li>
+            <li><a href="#">Project Management</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter">
+    <h3>Subscribe to Our Blog</h3>
+    <p>Stay updated with our latest posts and insights</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+
+  <!-- Footer (same as your site) -->
+  <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h3 class="text-light mb-4">Address</h3>
+          <p><i class="fa fa-map-marker-alt text-primary me-3"></i>47-A, Faizabad Colony, Nowgam, Srinagar, J&K</p>
+          <p><i class="fa fa-phone-alt text-primary me-3"></i>+91-9796517627 | +91-8899907360</p>
+          <p><i class="fa fa-envelope text-primary me-3"></i>novotech.consultants@gmail.com</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3 class="text-light mb-4">Services</h3>
+          <a class="btn btn-link" href="#">Engineering</a>
+          <a class="btn btn-link" href="#">Digital Services</a>
+          <a class="btn btn-link" href="#">Virtual Support</a>
+          <a class="btn btn-link" href="#">RPO</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3 class="text-light mb-4">Quick Links</h3>
+          <a class="btn btn-link" href="about.html">About Us</a>
+          <a class="btn btn-link" href="contact.html">Contact</a>
+          <a class="btn btn-link" href="service.html">Services</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3 class="text-light mb-4">About NovoTech</h3>
+          <p>Professional and innovative solutions across the globe.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
