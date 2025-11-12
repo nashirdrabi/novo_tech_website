@@ -2,301 +2,259 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>About NovoTech Consultants Pvt. Ltd.</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="engineering consultancy, environmental design, hydropower, novotech consultants" name="keywords">
-    <meta content="Learn about NovoTech Consultants Pvt. Ltd — A leading group of experts in engineering, environmental, and construction consultancy across North India." name="description">
+  <meta charset="utf-8">
+  <title>About NovoTech Consultants Pvt. Ltd.</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="engineering consultancy, environmental design, hydropower, novotech consultants, construction management" name="keywords">
+  <meta content="NovoTech Consultants Pvt. Ltd. — experts in engineering, environmental design, and construction management, delivering sustainable infrastructure solutions globally." name="description">
 
-    <!-- Favicon -->
-    <link href="img/new_logo.png" rel="icon">
+  <link href="img/new_logo.png" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Enhancements */
+   
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    /* h2,
+    h3,
+    h4 {
+      font-family: 'Teko', sans-serif;
+      letter-spacing: 0.5px;
+    color: #4CBB17;
+      
+    } */
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    /* p {
+      color: #555;
+      font-size: 16px;
+    } */
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    .about-section {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    .section-title {
+    color: #4CBB17;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
 
-    <style>
-        .about-section {
-            line-height: 1.8;
-            color: #444;
-        }
+    .highlight {
+     color: #4CBB17;
+      font-weight: 600;
+    }
 
-        .about-section ul {
-            list-style: none;
-            padding: 0;
-        }
+    /* Gradient background for alternating blocks */
+    .alt-section {
+      background: linear-gradient(180deg, #f9f9f9 0%, #eefdf9 100%);
+      border-radius: 12px;
+      padding: 50px 30px;
+    }
 
-        .about-section ul li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 28px;
-        }
+    /* Service Cards */
+    .service-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      transition: all 0.3s ease;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
 
-        .about-section ul li i {
-            color: #00b98e;
-            position: absolute;
-            left: 0;
-            top: 2px;
-        }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      border-color: #00b98e;
+    }
 
-        .specialization-box {
-            background: #f9f9f9;
-            border-radius: 10px;
-            padding: 25px;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-        }
+    .service-card i {
+     color: #4CBB17;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
 
-        .specialization-box:hover {
-            background: #e8f5f2;
-            transform: translateY(-5px);
-        }
+    /* Vision list */
+    .vision-list li {
+      margin-bottom: 10px;
+      padding-left: 28px;
+      position: relative;
+    }
 
-        .page-header {
-            background: url('img/carousel-1.jpg') center center/cover no-repeat;
-            background-attachment: fixed;
-        }
+    .vision-list li::before {
+      content: "✔";
+    color: #4CBB17;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
 
-        .page-header h1 {
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-        }
-    </style>
+    /* Contact Info */
+    .contact-info p {
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: url('img/carousel-1.jpg') center center/cover no-repeat;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    .page-header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .page-header h1 {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      font-size: 3rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">
-    </div>
-    <!-- Spinner End -->
+  <!-- Spinner -->
+  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 5rem; height: 5rem;" role="status"></div>
+  </div>
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+919858888827"><i class="fa fa-phone-alt text-primary me-2"></i>+91-9858888827</a>
-                    <a class="text-body px-2" href="mailto:novotech.consultants@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i>novotech.consultants@gmail.com</a>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                    <a class="text-body px-2" href="">Terms</a>
-                    <a class="text-body px-2" href="">Privacy</a>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square btn-outline-body me-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-0" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+  <!-- Topbar -->
+  <div class="container-fluid bg-dark text-light py-2 small">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <i class="fa fa-phone-alt text-primary me-2"></i> +91-9858888827 |
+        <i class="fa fa-envelope-open text-primary ms-2 me-1"></i> novotech.consultants@gmail.com
+      </div>
+      <div>
+        <a class="text-light me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="text-light me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a class="text-light" href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top shadow-sm px-lg-5">
+    <a href="index.html" class="navbar-brand">
+      <img src="img/new_logo.png" alt="NovoTech Logo" height="70">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto">
+        <a href="index.html" class="nav-item nav-link">Home</a>
+        <a href="about.html" class="nav-item nav-link active">About</a>
+        <a href="service.html" class="nav-item nav-link">Services</a>
+        <a href="projects.html" class="nav-item nav-link">Projects</a>
+        <a href="team.html" class="nav-item nav-link">Team</a>
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="container-fluid page-header py-5 text-center mb-5">
+    <h1 class="display-4 animated fadeInDown">About NovoTech Consultants Pvt. Ltd.</h1>
+  </div>
+
+  <!-- About Intro -->
+  <section class="about-section text-center">
+    <div class="container">
+      <h4 class="section-title">Who We Are</h4>
+      <h2 class="display-6 mb-3">Experts in Civil, Environmental, and Construction Management Engineering</h2>
+      <p class="lead mx-auto" style="max-width:850px;">
+        <strong>NovoTech Consultants Pvt. Ltd.</strong> is a globally active engineering and construction management firm established in 2014, with expertise reaching back to 2000. We combine innovation, efficiency, and sustainability to deliver impactful engineering solutions across North America, APAC, EU, and the Middle East.
+      </p>
+    </div>
+  </section>
+
+  <!-- Engineering & Construction Sectors -->
+  <section class="alt-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="service-card text-center h-100">
+            <i class="fas fa-drafting-compass"></i>
+            <h4>Engineering Consultancy Sectors</h4>
+            <ul class="text-start mt-3">
+              <li>Building Concepts & Architectural Designs</li>
+              <li>Structural Analysis and Design</li>
+              <li>Land Development Engineering</li>
+              <li>Water Resources & Hydropower Engineering</li>
+              <li>Transportation & Urban-Municipal Planning</li>
+              <li>GIS Mapping and Modelling</li>
+            </ul>
+          </div>
         </div>
-    </div>
-    <!-- Topbar End -->
-
-   <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <h3 class="text-primary m-0"><img class="me-3" src="img/new_logo.png" alt="Icon" height="80px"width="100px"></h3>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link active">About</a>
-              
-                <div class="nav-item dropdown">
-    <a href="service.html" class="nav-link dropdown-toggle" id="services-link" data-bs-toggle="dropdown">Services</a>
-    <div class="dropdown-menu border-0 m-0">
-        <a href="service_description.html" class="dropdown-item">Engineering</a>
-        <a href="service_description.html" class="dropdown-item">Bid Management</a>
-      
-        
-        <a href="service_description.html" class="dropdown-item">Digital Services</a>
-        <a href="service_description.html" class="dropdown-item">Virtual Support</a>
-          <a href="service_description.html" class="dropdown-item">RPO</a>
-       
-    </div>
-</div>
-
-                  <a href="team.html" class="nav-item nav-link">Team</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-                <a href="blog.html" class="nav-item nav-link">Blog</a>
-                <a href="projects.html" class="nav-item nav-link">Projects</a>
-            </div>
-       
+        <div class="col-lg-6">
+          <div class="service-card text-center h-100">
+            <i class="fas fa-hard-hat"></i>
+            <h4>Construction Management Specializations</h4>
+            <ul class="text-start mt-3">
+              <li>Bid Process Management</li>
+              <li>Contract Administration</li>
+              <li>Construction Planning & Management</li>
+              <li>Utility Coordination and Implementation</li>
+              <li>Environmental Facility Construction (WTPs, STPs, ETPs)</li>
+            </ul>
+          </div>
         </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Page Header -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-4 text-white animated slideInDown">About NovoTech Consultants Pvt. Ltd.</h1>
-        </div>
+      </div>
     </div>
-    <!-- Page Header End -->
+  </section>
 
-    <!-- About Content -->
-    <div class="container-xxl py-5 about-section">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                <h4 class="section-title">Who We Are</h4>
-                <h2 class="display-6 mb-4">A Group of Environmental & Engineering Consultancy and Construction Experts in North India</h2>
-                <p class="lead">NovoTech Consultants Pvt. Ltd. is a fast-growing consultancy and construction firm established in 2014, with individual expertise tracing back to 2000. We deliver advanced solutions in planning, engineering, and environmental management, combining innovation with sustainability.</p>
-            </div>
-
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="specialization-box">
-                        <h4 class="mb-4"><i class="fas fa-drafting-compass text-primary me-2"></i> Consultancy Specializations</h4>
-                        <ul>
-                            <li><i class="fas fa-water"></i> Environmental Engineering</li>
-                            <li><i class="fas fa-leaf"></i> Environmental Management</li>
-                            <li><i class="fas fa-bolt"></i> Hydropower Engineering</li>
-                            <li><i class="fas fa-tint"></i> Storm-water, Drainage, and Sewerage</li>
-                            <li><i class="fas fa-solar-panel"></i> Renewable Energy Design</li>
-                            <li><i class="fas fa-cogs"></i> Structural Engineering</li>
-                            <li><i class="fas fa-pencil-ruler"></i> Architectural Planning</li>
-                            <li><i class="fas fa-road"></i> Transportation and Highways</li>
-                            <li><i class="fas fa-tree"></i> Heritage Conservation</li>
-                            <li><i class="fas fa-map"></i> Infrastructure and Urban Planning</li>
-                            <li><i class="fas fa-city"></i> Housing and Tourism Development</li>
-                            <li><i class="fas fa-chart-line"></i> Economic Development</li>
-                            <li><i class="fas fa-ruler-combined"></i> Surveying & GIS Mapping</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="specialization-box">
-                        <h4 class="mb-4"><i class="fas fa-hard-hat text-primary me-2"></i> Construction Specializations</h4>
-                        <ul>
-                            <li><i class="fas fa-tools"></i> Construction Planning & Management</li>
-                            <li><i class="fas fa-building"></i> Roads and Buildings Development</li>
-                            <li><i class="fas fa-solar-panel"></i> Solar Power and Wind Turbine Installations</li>
-                            <li><i class="fas fa-faucet"></i> Water Supply, Sewerage & Drainage Systems</li>
-                            <li><i class="fas fa-industry"></i> WTPs, STPs, and ETPs Construction</li>
-                           
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-5 wow fadeInUp" data-wow-delay="0.2s">
-                <h4 class="section-title text-center mb-4">Our Vision</h4>
-                <p class="text-center mx-auto" style="max-width: 800px;">To be a leader in sustainable engineering and environmental solutions by merging innovation, efficiency, and technical expertise — driving infrastructure excellence and green growth across India.</p>
-            </div>
-        </div>
+  <!-- Vision Section -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h4 class="section-title">Our Vision</h4>
+      <p class="mx-auto" style="max-width:800px;">
+        We aim to be a leader in sustainable engineering and environmental solutions by merging innovation, efficiency, and technical expertise to drive infrastructure excellence and green growth across the globe.
+      </p>
+      <ul class="vision-list mx-auto text-start" style="max-width:600px;">
+        <li>Sustainable Engineering and Environmental Solutions</li>
+        <li>Professional Excellence and Value Addition</li>
+        <li>Innovation-driven Design Approach</li>
+        <li>Ethical and Regulated Professional Practice</li>
+      </ul>
     </div>
-    <!-- About Content End -->
+  </section>
 
-    <!-- Replace ONLY the "Our Team" section in your existing about.html with this -->
-
-<!-- Executive Summary Start -->
-<div class="container-xxl py-5">
-  <div class="container">
-    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
+  <!-- Executive Summary -->
+  <section class="alt-section">
+    <div class="container text-center">
       <h4 class="section-title">Executive Summary</h4>
-      <h2 class="display-6 mb-4">Building Expertise and Innovation in Infrastructure Development</h2>
-    </div>
-
-    <div class="wow fadeInUp" data-wow-delay="0.2s" style="line-height: 1.9; color: #444;">
-      <p>
-        <strong>NovoTech Consultants</strong> is a budding team of Engineers, Designers, Architects, Interior Designers,
-        Surveyors, and support staff with substantial experience and necessary skill sets in infrastructure development,
-        including Design Engineering, Architectural Consultancy, Geo-Tagging, Environmental Engineering, Hydropower
-        Engineering, Project Management Consultancy, Topographical Surveys using ETS, Geotechnical Investigations,
-        and preparation of DPRs, PFRs, GIS & DTP.
+      <h2 class="mb-3">Building Expertise and Innovation in Infrastructure Development</h2>
+      <p class="mx-auto" style="max-width:850px;">
+        NovoTech Consultants is a team of multi-disciplinary experts in the AEC domain, offering advanced services in architecture, land development, water resources, hydropower, and project management consultancy. Our experience spans across global markets — delivering end-to-end design, development, and implementation support.
       </p>
-
-      <p>
-        The <strong>NovoTech Consultants</strong> team is uniquely qualified to provide comprehensive services that modern
-        infrastructure projects demand — built upon our strong combination of knowledge, practical experience, teamwork,
-        and capabilities. Our project team has significant expertise in engineering, architectural, and interior designing
-        consultancy across the Kashmir Valley and Jammu region.
-      </p>
-
-      <p>
-        The firm is presently engaged in various projects involving comprehensive engineering, planning, design, survey,
-        and project management of multi-faceted developmental schemes across the state. We also collaborate with
-        specialized sub-consultants in related domains — such as field and social surveys, geotechnical testing, and
-        environmental monitoring — enhancing our overall knowledge base and technical strength.
+      <p class="mx-auto" style="max-width:850px;">
+        Our approach emphasizes innovation, collaboration, and precision. We prioritize practical and cost-effective solutions to ensure that clients achieve their goals without compromising timelines or quality.
       </p>
     </div>
-  </div>
-</div>
-<!-- Executive Summary End -->
+  </section>
 
-<!-- Our Expertise (Tagline Section) -->
-<div class="container py-4 wow fadeInUp" data-wow-delay="0.3s">
-  <div class="d-flex flex-wrap justify-content-center gap-3 text-center">
-    <span class="badge bg-light text-primary border px-3 py-2 fs-6"><i class="fas fa-cogs me-2"></i>Engineering</span>
-    <span class="badge bg-light text-primary border px-3 py-2 fs-6"><i class="fas fa-pencil-ruler me-2"></i>Architecture</span>
-    <span class="badge bg-light text-primary border px-3 py-2 fs-6"><i class="fas fa-project-diagram me-2"></i>Project Management</span>
-    <span class="badge bg-light text-primary border px-3 py-2 fs-6"><i class="fas fa-water me-2"></i>Hydropower</span>
-    <span class="badge bg-light text-primary border px-3 py-2 fs-6"><i class="fas fa-leaf me-2"></i>Environmental Engineering</span>
-  </div>
-</div>
+  
 
-<!-- Why NovoTech Consultants Start -->
-<div class="container-xxl py-5">
-  <div class="container">
-    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
-      <h4 class="section-title">Why NovoTech Consultants?</h4>
-      <h2 class="display-6 mb-4">Experience, Precision, and Vision in Every Project</h2>
-    </div>
-
-    <div class="wow fadeInUp" data-wow-delay="0.2s" style="line-height: 1.9; color: #444;">
-      <p>
-        <strong>NovoTech Consultants</strong> is a relatively new company in name only. The firm has long been engaged in
-        detailed surveying, design, engineering, architecture, interior decoration, drafting, and project management and
-        supervision of various complex projects. Our approach blends innovation, technical excellence, and on-ground
-        efficiency.
-      </p>
-
-      <p>
-        Our project team possesses national and international experience in diverse fields of engineering and
-        infrastructure. We are currently involved in several civil engineering projects encompassing detailed surveys,
-        planning, architecture, interiors, and other allied works — continuously driving excellence and delivering
-        sustainable infrastructure.
-      </p>
-
-      <p>
-        <strong>The NovoTech difference</strong> lies in our ability to integrate design, execution, and innovation seamlessly.
-        We are proud to be the only firm in the Kashmir region to have successfully conducted <strong>Geo Tagging of
-        Water Supply Schemes</strong> for the PHE Department across the state, including the complete migration of field data
-        to the official MDWS platform. This milestone reflects our dedication to technical precision, data-driven
-        engineering, and transformative infrastructure solutions.
-      </p>
-    </div>
-  </div>
-</div>
-<!-- Why NovoTech Consultants End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -334,34 +292,19 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">2025 NovoTech Consultants</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Company Reg No: <a href="#">U74900JK2014PTC004234</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container-fluid text-center border-top py-3 small">
+      &copy; 2025 NovoTech Consultants Pvt. Ltd. | Reg No: U74900JK2014PTC004234
     </div>
-    <!-- Footer End -->
+  </div>
 
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
