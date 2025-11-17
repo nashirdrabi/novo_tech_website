@@ -9,9 +9,9 @@
   <meta content="NovoTech Consultants Pvt. Ltd. — experts in engineering, environmental design, and construction management, delivering sustainable infrastructure solutions globally." name="description">
 
   <link href="img/new_logo.png" rel="icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -78,14 +78,44 @@
       border-color: #00b98e;
     }
 
+    /* --- ICON & FONT ENHANCEMENTS START --- */
     .service-card i {
      color: #4CBB17;
-      font-size: 28px;
+      font-size: 38px; /* Increased Icon Size */
       margin-bottom: 15px;
     }
+    
+    .service-card ul li {
+      font-size: 17px; /* Increased font size for list items */
+      margin-bottom: 8px; /* Added spacing */
+    }
+    
+    .service-card ul li i {
+        font-size: 18px; /* Icon size for list items */
+        margin-right: 8px;
+    }
+    
+    /* Vision list enhancements */
+    .vision-list li {
+      margin-bottom: 12px;
+      padding-left: 0; /* Remove default padding for custom icon layout */
+      position: relative;
+      font-size: 18px; /* Increased font size */
+    }
+
+    .vision-list li i {
+      color: #4CBB17;
+      font-size: 24px; /* Increased Vision Icon Size */
+      margin-right: 10px;
+    }
+    
+    .vision-list li::before {
+        content: none; /* Remove existing checkmark */
+    }
+    /* --- ICON & FONT ENHANCEMENTS END --- */
 
     /* Vision list */
-    .vision-list li {
+    /* .vision-list li {
       margin-bottom: 10px;
       padding-left: 28px;
       position: relative;
@@ -98,7 +128,7 @@
       position: absolute;
       left: 0;
       top: 0;
-    }
+    } */
 
     /* Contact Info */
     .contact-info p {
@@ -108,7 +138,8 @@
 
     /* Page Header */
     .page-header {
-      background: url('img/carousel-1.jpg') center center/cover no-repeat;
+      height: 300px;
+      background: url('img/c4.jpg') center center/cover no-repeat;
       background-attachment: fixed;
       position: relative;
     }
@@ -127,16 +158,22 @@
       font-size: 3rem;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     }
+    
+    /* New Image Style for About Intro */
+    .about-image {
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        max-width: 100%;
+        height: auto;
+    }
   </style>
 </head>
 
 <body>
-  <!-- Spinner -->
   <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
     <div class="spinner-border text-primary" style="width: 5rem; height: 5rem;" role="status"></div>
   </div>
 
-  <!-- Topbar -->
   <div class="container-fluid bg-dark text-light py-2 small">
     <div class="container d-flex justify-content-between">
       <div>
@@ -151,10 +188,10 @@
     </div>
   </div>
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top shadow-sm px-lg-5">
     <a href="index.html" class="navbar-brand">
       <img src="img/new_logo.png" alt="NovoTech Logo" height="70">
+    
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
@@ -171,50 +208,62 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <div class="container-fluid page-header py-5 text-center mb-5">
-    <h1 class="display-4 animated fadeInDown">About NovoTech Consultants Pvt. Ltd.</h1>
-  </div>
+ <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-1 text-white animated slideInDown">About NovoTech Consultants Pvt. Ltd.</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+              
+            </nav>
+        </div>
+    </div>
 
-  <!-- About Intro -->
-  <section class="about-section text-center">
+  <section class="about-section">
     <div class="container">
-      <h4 class="section-title">Who We Are</h4>
-      <h2 class="display-6 mb-3">Experts in Civil, Environmental, and Construction Management Engineering</h2>
-      <p class="lead mx-auto" style="max-width:850px;">
-        <strong>NovoTech Consultants Pvt. Ltd.</strong> is a globally active engineering and construction management firm established in 2014, with expertise reaching back to 2000. We combine innovation, efficiency, and sustainability to deliver impactful engineering solutions across North America, APAC, EU, and the Middle East.
-      </p>
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h4 class="section-title">Who We Are</h4>
+                <h2 class="display-6 mb-3">Experts in Civil, Environmental, and Construction Management Engineering</h2>
+                <p class="lead" style="max-width:850px;">
+                    <strong>NovoTech Consultants Pvt. Ltd.</strong> is a globally active engineering and construction management firm established in 2014, with expertise reaching back to 2000. We combine **innovation**, **efficiency**, and **sustainability** to deliver impactful engineering solutions across North America, APAC, EU, and the Middle East.
+                </p>
+                <p class="mb-0">
+                    Our commitment is to professional excellence, ensuring every project meets the highest standards of quality and ethical practice.
+                </p>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <img class="img-fluid about-image" src="img/c3.jpg" alt="A modern construction project or architectural rendering.">
+            </div>
+        </div>
     </div>
   </section>
 
-  <!-- Engineering & Construction Sectors -->
   <section class="alt-section">
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-6">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
           <div class="service-card text-center h-100">
             <i class="fas fa-drafting-compass"></i>
             <h4>Engineering Consultancy Sectors</h4>
-            <ul class="text-start mt-3">
-              <li>Building Concepts & Architectural Designs</li>
-              <li>Structural Analysis and Design</li>
-              <li>Land Development Engineering</li>
-              <li>Water Resources & Hydropower Engineering</li>
-              <li>Transportation & Urban-Municipal Planning</li>
-              <li>GIS Mapping and Modelling</li>
+            <ul class="text-start mt-4 list-unstyled">
+              <li><i class="fas fa-building text-success"></i> Building Concepts & Architectural Designs</li>
+              <li><i class="fas fa-cube text-success"></i> Structural Analysis and Design</li>
+              <li><i class="fa fa-tree text-success"></i> Land Development Engineering</li>
+              <li><i class="fas fa-water text-success"></i> Water Resources & Hydropower Engineering</li>
+              <li><i class="fas fa-road text-success"></i> Transportation & Urban-Municipal Planning</li>
+              <li><i class="fas fa-globe-asia text-success"></i> GIS Mapping and Modelling</li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
           <div class="service-card text-center h-100">
             <i class="fas fa-hard-hat"></i>
             <h4>Construction Management Specializations</h4>
-            <ul class="text-start mt-3">
-              <li>Bid Process Management</li>
-              <li>Contract Administration</li>
-              <li>Construction Planning & Management</li>
-              <li>Utility Coordination and Implementation</li>
-              <li>Environmental Facility Construction (WTPs, STPs, ETPs)</li>
+            <ul class="text-start mt-4 list-unstyled">
+              <li><i class="fas fa-scroll text-success"></i> Bid Process Management</li>
+              <li><i class="fas fa-handshake text-success"></i> Contract Administration</li>
+              <li><i class="fas fa-project-diagram text-success"></i> Construction Planning & Management</li>
+              <li><i class="fa fa-industry text-success"></i> Utility Coordination and Implementation</li>
+              <li><i class="fas fa-recycle text-success"></i> Environmental Facility Construction (WTPs, STPs, ETPs)</li>
             </ul>
           </div>
         </div>
@@ -222,25 +271,23 @@
     </div>
   </section>
 
-  <!-- Vision Section -->
   <section class="py-5">
-    <div class="container text-center">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.1s">
       <h4 class="section-title">Our Vision</h4>
       <p class="mx-auto" style="max-width:800px;">
         We aim to be a leader in sustainable engineering and environmental solutions by merging innovation, efficiency, and technical expertise to drive infrastructure excellence and green growth across the globe.
       </p>
-      <ul class="vision-list mx-auto text-start" style="max-width:600px;">
-        <li>Sustainable Engineering and Environmental Solutions</li>
-        <li>Professional Excellence and Value Addition</li>
-        <li>Innovation-driven Design Approach</li>
-        <li>Ethical and Regulated Professional Practice</li>
+      <ul class="vision-list mx-auto text-start list-unstyled" style="max-width:600px;">
+        <li><i class="fas fa-leaf"></i> Sustainable Engineering and Environmental Solutions</li>
+        <li><i class="fas fa-award"></i> Professional Excellence and Value Addition</li>
+        <li><i class="fas fa-lightbulb"></i> Innovation-driven Design Approach</li>
+        <li><i class="fas fa-balance-scale"></i> Ethical and Regulated Professional Practice</li>
       </ul>
     </div>
   </section>
 
-  <!-- Executive Summary -->
   <section class="alt-section">
-    <div class="container text-center">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.1s">
       <h4 class="section-title">Executive Summary</h4>
       <h2 class="mb-3">Building Expertise and Innovation in Infrastructure Development</h2>
       <p class="mx-auto" style="max-width:850px;">
@@ -300,7 +347,7 @@
   <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr-net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>

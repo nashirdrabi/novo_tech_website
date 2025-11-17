@@ -5,47 +5,139 @@
   <title>NovoTech | Team</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="img/novo_logo_trans.png" rel="icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet" />
+  
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
 
   <style>
+    body {
+      font-family: 'Open Sans', sans-serif; /* Default body font */
+    }
+    .section-title, h1, h2, h3, h4, .navbar-nav .nav-link, .bio-toggle, .consultant-toggle {
+      font-family: 'Poppins', sans-serif; /* Apply Poppins to headings and specific elements */
+    }
+
+    /* General Team Item Styling */
     .team-item {
       border: 1px solid #eee;
       border-radius: 12px;
       overflow: hidden;
-      transition: 0.3s;
+      transition: all 0.3s ease; /* Smooth transition for all properties */
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
     .team-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transform: translateY(-5px); /* More pronounced lift */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Stronger shadow */
     }
-    .bio-toggle {
-      color: #0d6efd;
-      font-weight: 600;
-      cursor: pointer;
+
+    /* Image Styling */
+    .team-item img, .consultant-item .consultant-img-container img {
+      width: 100%;
+      height: 400px; /* Increased height for images */
+      object-fit: cover;
+      transition: transform 0.3s ease; /* Smooth zoom on hover */
+    }
+    .team-item:hover img, .consultant-item:hover .consultant-img-container img {
+      transform: scale(1.05); /* Slightly zoom image on hover */
+    }
+
+    .team-item .bg-light, .consultant-item .consultant-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem; /* Slightly more padding */
+    }
+
+    /* Attractive "Read Bio" Buttons */
+    .bio-toggle, .consultant-toggle {
+      background-color: #0d6efd; /* Primary blue background */
+      color: #fff; /* White text */
+      padding: 8px 15px; /* Comfortable padding */
+      border-radius: 25px; /* Pill shape */
+      font-size: 0.95rem; /* Slightly larger text */
+      font-weight: 500; /* Medium weight */
+      text-decoration: none; /* Remove underline */
       display: inline-block;
-      margin-top: 6px;
+      margin-top: 15px; /* More space from content */
+      transition: all 0.3s ease; /* Smooth transitions for hover */
+      border: 2px solid #0d6efd; /* Border for hover effect */
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Subtle shadow */
     }
-    .bio-content {
+
+    .bio-toggle:hover, .consultant-toggle:hover {
+      background-color: #0a58ca; /* Darker blue on hover */
+      border-color: #0a58ca;
+      color: #fff;
+      transform: translateY(-2px); /* Slight lift */
+      box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); /* Enhanced shadow */
+      text-decoration: none; /* Ensure no underline on hover */
+    }
+
+    .bio-content, .consultant-bio-content {
       max-height: 0;
       overflow: hidden;
-      transition: all 0.45s ease;
+      transition: all 0.5s ease-in-out; /* Smoother and longer transition */
+      text-align: left;
+      font-size: 0.9rem;
+      color: #555;
+      padding-top: 0; /* Remove initial padding */
     }
-    .bio-content.open {
-      max-height: 600px;
-      padding-top: 10px;
+    .bio-content.open, .consultant-bio-content.open {
+      max-height: 600px; /* Adjust as needed */
+      padding-top: 15px; /* Add padding when open */
     }
-    .accordion-button:focus { box-shadow:none; }
- 
+    .bio-content p, .consultant-bio-content p, .bio-content ul, .consultant-bio-content ul {
+        margin-bottom: 0.5rem; /* Spacing for bio paragraphs */
+    }
+
+
+    /* Specific styles for External Consultants section to mimic team-item */
+    .consultant-item {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .consultant-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .consultant-item .consultant-img-container {
+      width: 100%;
+      height: 300px; /* Increased height for consultant images */
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #eee;
+    }
+    /* Poppins for Consultant titles too */
+    .consultant-item h4 {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Small adjustment for navbar to inherit Poppins */
+    .navbar-nav .nav-item .nav-link {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500; /* Ensure it's not too bold */
+    }
   </style>
 </head>
 
 <body>
-<!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
             <h3 class="text-primary m-0"><img class="me-3" src="img/new_logo.png" alt="Icon" height="80px"width="100px"></h3>
         </a>
@@ -79,17 +171,13 @@
        
         </div>
     </nav>
-    <!-- Navbar End -->
-
-<!-- Header -->
-<div class="container-fluid page-header py-5 mb-5 bg-primary text-white text-center">
+    <div class="container-fluid page-header py-5 mb-5 bg-primary text-white text-center">
   <div class="container py-5">
     <h1 class="display-4 text-white">Meet Our Team</h1>
     <p class="lead text-white-50">Engineering excellence powered by experience</p>
   </div>
 </div>
 
-<!-- Team -->
 <div class="container-xxl py-5">
   <div class="container">
     <div class="text-center mx-auto mb-5" style="max-width:700px;">
@@ -98,15 +186,14 @@
     </div>
 
     <div class="row g-4">
-      <!-- Najib Trombo -->
       <div class="col-lg-4 col-md-6">
         <div class="team-item p-3">
           <img class="img-fluid" src="img/director.jpeg" alt="Najib Trombo">
           <div class="bg-light text-center p-4">
             <h4>Najib Trombo, P.Eng.</h4>
             <p class="text-primary mb-1">Director</p>
-            <span class="bio-toggle" onclick="toggleBio(this)">Read Bio</span>
-            <div class="bio-content mt-2">
+            <span class="bio-toggle" onclick="toggleBio(this, 'najibBio')">Read Bio</span>
+            <div id="najibBio" class="bio-content mt-2">
               <p>P.Eng. (Ontario), MBA, APGDRE (TERI), FIE (India), C.Eng. (India)</p>
               <p>Licensed P.Eng. from Ontario with 37 years’ experience in Water Resources, Land Development, Urban Utilities and Hydropower. Worked across Canada, USA & India for government and private consulting agencies. Expert in Floodplain Management, Drinking Water Supply and Nuclear Cooling Water Intakes.</p>
               <p>Global Technical Executive known for building and leading large international civil engineering teams.</p>
@@ -115,15 +202,14 @@
         </div>
       </div>
 
-      <!-- Tahir Bashir -->
       <div class="col-lg-4 col-md-6">
         <div class="team-item p-3">
-          <img class="img-fluid" src="img/team1.png" alt="Tahir Bashir">
+          <img class="img-fluid" src="img/tahir_edit.png" alt="Tahir Bashir">
           <div class="bg-light text-center p-4">
             <h4>Tahir Bashir</h4>
             <p class="text-primary mb-1">Director</p>
-            <span class="bio-toggle" onclick="toggleBio(this)">Read Bio</span>
-            <div class="bio-content mt-2">
+            <span class="bio-toggle" onclick="toggleBio(this, 'tahirBio')">Read Bio</span>
+            <div id="tahirBio" class="bio-content mt-2">
               <p>Commerce & Business Management specialist focused on strategic business growth and development.</p>
               <ul class="text-start small">
                 <li>Business Development & Sales Strategy</li>
@@ -135,105 +221,98 @@
         </div>
       </div>
 
-      <!-- S. M. Andrabi -->
       <div class="col-lg-4 col-md-6">
         <div class="team-item p-3">
-          <img class="img-fluid" src="img/team2.png" alt="S M Andrabi">
+          <img class="img-fluid" src="img/team5.png" alt="S M Andrabi">
           <div class="bg-light text-center p-4">
             <h4>S. M. Andrabi</h4>
             <p class="text-primary mb-1">Structural Engineer</p>
-            <span class="bio-toggle" onclick="toggleBio(this)">Read Bio</span>
-            <div class="bio-content mt-2">
+            <span class="bio-toggle" onclick="toggleBio(this, 'andrabiBio')">Read Bio</span>
+            <div id="andrabiBio" class="bio-content mt-2">
               <p>Expert in design of steel and RC structures under static and dynamic loading. Proficient with Ansys, Abaqus, ETABS, SAP2000, RISA and STAAD. Highly skilled in programming using MATLAB and Python for simulation and automation.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- N. U. Zahoor -->
       <div class="col-lg-4 col-md-6">
         <div class="team-item p-3">
-          <img class="img-fluid" src="img/team2.png" alt="N U Zahoor">
+          <img class="img-fluid" src="img/team6.png" alt="N U Zahoor">
           <div class="bg-light text-center p-4">
             <h4>N. U. Zahoor</h4>
             <p class="text-primary mb-1">Water Resources Engineer</p>
-            <span class="bio-toggle" onclick="toggleBio(this)">Read Bio</span>
-            <div class="bio-content mt-2">
+            <span class="bio-toggle" onclick="toggleBio(this, 'zahoorBio')">Read Bio</span>
+            <div id="zahoorBio" class="bio-content mt-2">
               <p>B.E. (Civil), M.Tech (Environmental Engineering). Experienced in water and environmental facilities, solid waste management, structural design, contract administration and peer review of infrastructure projects.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- F. Yaseen -->
       <div class="col-lg-4 col-md-6">
         <div class="team-item p-3">
-          <img class="img-fluid" src="img/team2.png" alt="F Yaseen">
+          <img class="img-fluid" src="img/team7.png" alt="F Yaseen">
           <div class="bg-light text-center p-4">
-            <h4>F. Yaseen</h4>
+            <h4>F. Shaw</h4>
             <p class="text-primary mb-1">Municipal Engineering & Design</p>
-            <span class="bio-toggle" onclick="toggleBio(this)">Read Bio</span>
-            <div class="bio-content mt-2">
+            <span class="bio-toggle" onclick="toggleBio(this, 'shawBio')">Read Bio</span>
+            <div id="shawBio" class="bio-content mt-2">
               <p>M.Sc. (Geotechnical Engg.), B.E. (Civil). Versatile Project Manager in sustainable infrastructure. Expert in Land Development Design using Civil 3D and CAD, compliant with North American LDD and Stormwater standards.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- W. Rashid -->
       <div class="col-lg-4 col-md-6">
         <div class="team-item p-3">
-          <img class="img-fluid" src="img/team2.png" alt="W Rashid">
+          <img class="img-fluid" src="img/team5.png" alt="W Rashid">
           <div class="bg-light text-center p-4">
             <h4>W. Rashid</h4>
             <p class="text-primary mb-1">Civil Design Engineer</p>
-            <span class="bio-toggle" onclick="toggleBio(this)">Read Bio</span>
-            <div class="bio-content mt-2">
+            <span class="bio-toggle" onclick="toggleBio(this, 'rashidBio')">Read Bio</span>
+            <div id="rashidBio" class="bio-content mt-2">
               <p>B.Tech (Civil), M.Tech (Transportation Engg). Designs water treatment plants, raw and clear water mains, distribution systems and residential/commercial structures. Expert in Autodesk Revit and STAAD.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- S. Hidayat -->
       <div class="col-lg-4 col-md-6">
         <div class="team-item p-3">
           <img class="img-fluid" src="img/team2.png" alt="S Hidayat">
           <div class="bg-light text-center p-4">
             <h4>S. Hidayat</h4>
             <p class="text-primary mb-1">Construction Management</p>
-            <span class="bio-toggle" onclick="toggleBio(this)">Read Bio</span>
-            <div class="bio-content mt-2">
+            <span class="bio-toggle" onclick="toggleBio(this, 'hidayatBio')">Read Bio</span>
+            <div id="hidayatBio" class="bio-content mt-2">
               <p>Expert in Civil & Green Infrastructure construction and operations management, RE Walls and Geosynthetic implementation. Experienced in logistics & inventory optimization using PERT/CPM techniques.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- A. Aslam -->
       <div class="col-lg-4 col-md-6">
         <div class="team-item p-3">
-          <img class="img-fluid" src="img/team2.png" alt="A Aslam">
+          <img class="img-fluid" src="img/team5.png" alt="A Aslam">
           <div class="bg-light text-center p-4">
-            <h4>A. Aslam</h4>
+            <h4>A.John</h4>
             <p class="text-primary mb-1">Architecture & MEP</p>
-            <span class="bio-toggle" onclick="toggleBio(this)">Read Bio</span>
-            <div class="bio-content mt-2">
+            <span class="bio-toggle" onclick="toggleBio(this, 'johnBio')">Read Bio</span>
+            <div id="johnBio" class="bio-content mt-2">
               <p>Professional Structural & Civil Engineer (7+ years). Experienced in structural analysis, project management and BIM integration. Skilled in Revit, ETABS, STAAD Pro and AutoCAD; versed in U.S., Euro, NZ, Australian and Indian codes.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- G. Altaf -->
       <div class="col-lg-4 col-md-6">
         <div class="team-item p-3">
           <img class="img-fluid" src="img/team2.png" alt="G Altaf">
           <div class="bg-light text-center p-4">
             <h4>G. Altaf</h4>
             <p class="text-primary mb-1">Construction Management</p>
-            <span class="bio-toggle" onclick="toggleBio(this)">Read Bio</span>
-            <div class="bio-content mt-2">
+            <span class="bio-toggle" onclick="toggleBio(this, 'altafBio')">Read Bio</span>
+            <div id="altafBio" class="bio-content mt-2">
               <p>Specialist in construction and operations management of civil infrastructure and water resource structures. Experienced in cost estimation, plan production, tendering and bid evaluation.</p>
             </div>
           </div>
@@ -246,56 +325,75 @@
   <p class="text-muted">Senior experts bringing decades of specialized experience</p>
 </div>
 
-<div class="accordion" id="consultantsAccordion">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button **accordion-button-rtl**" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
-        <strong style="color: black;">S. Farooq</strong> — Civil & Municipal Engineering
-      </button>
-    </h2>
-    <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#consultantsAccordion">
-      <div class="accordion-body">40 years in Civil Design, Land Development and Stormwater Management across North America and India.</div>
-    </div>
-  </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="consultant-item p-3">
+          <div class="consultant-img-container">
+            <img class="img-fluid" src="img/ext.png" alt="S. Farooq">
+          </div>
+          <div class="consultant-content text-center">
+            <h4>S. Farooq</h4>
+            <p class="text-primary mb-1">Civil & Municipal Engineering</p>
+            <span class="consultant-toggle" onclick="toggleBio(this, 'farooqBio')">Read Bio</span>
+            <div id="farooqBio" class="consultant-bio-content mt-2">
+              <p>40 years in Civil Design, Land Development and Stormwater Management across North America and India. Expert in regulatory compliance and sustainable design practices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed **accordion-button-rtl**" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
-        <strong style="color: black;">B. G. Ahmad</strong> — Water & Municipal Engineering
-      </button>
-    </h2>
-    <div id="c2" class="accordion-collapse collapse" data-bs-parent="#consultantsAccordion">
-      <div class="accordion-body">38 years of experience in Urban and Rural Water Resources, Contract Management and Regulatory Compliance including Quality Control and Funding management.</div>
-    </div>
-  </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="consultant-item p-3">
+          <div class="consultant-img-container">
+            <img class="img-fluid" src="img/ext.png" alt="B. G. Ahmad">
+          </div>
+          <div class="consultant-content text-center">
+            <h4>B. G. Ahmad</h4>
+            <p class="text-primary mb-1">Water & Municipal Engineering</p>
+            <span class="consultant-toggle" onclick="toggleBio(this, 'ahmadBio')">Read Bio</span>
+            <div id="ahmadBio" class="consultant-bio-content mt-2">
+              <p>38 years of experience in Urban and Rural Water Resources, Contract Management and Regulatory Compliance including Quality Control and Funding management. Specializes in large-scale water infrastructure projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed **accordion-button-rtl**" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
-        <strong style="color: black;">W. Lone</strong> — Hydropower & Municipal Engineering
-      </button>
-    </h2>
-    <div id="c3" class="accordion-collapse collapse" data-bs-parent="#consultantsAccordion">
-      <div class="accordion-body">38 years in Hydropower concept & design, Urban and Rural Water resources, Contract Management and Regulatory Compliance.</div>
-    </div>
-  </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="consultant-item p-3">
+          <div class="consultant-img-container">
+            <img class="img-fluid" src="img/ext.png" alt="W. Lone">
+          </div>
+          <div class="consultant-content text-center">
+            <h4>W. Lone</h4>
+            <p class="text-primary mb-1">Hydropower & Municipal Engineering</p>
+            <span class="consultant-toggle" onclick="toggleBio(this, 'loneBio')">Read Bio</span>
+            <div id="loneBio" class="consultant-bio-content mt-2">
+              <p>38 years in Hydropower concept & design, Urban and Rural Water resources, Contract Management and Regulatory Compliance. Extensive experience in renewable energy infrastructure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed **accordion-button-rtl**" type="button" data-bs-toggle="collapse" data-bs-target="#c4">
-        <strong style="color: black;">D. Rashid</strong> — Electro-Mechanical Engineering
-      </button>
-    </h2>
-    <div id="c4" class="accordion-collapse collapse" data-bs-parent="#consultantsAccordion">
-      <div class="accordion-body">38 years of expertise in Electro-Mechanical and Hydro-Mechanical Engineering, Bid Processing, Contract Management and Project Certification.</div>
+      <div class="col-lg-4 col-md-6">
+        <div class="consultant-item p-3">
+          <div class="consultant-img-container">
+            <img class="img-fluid" src="img/ext.png" alt="D. Rashid">
+          </div>
+          <div class="consultant-content text-center">
+            <h4>D. Rashid</h4>
+            <p class="text-primary mb-1">Electro-Mechanical Engineering</p>
+            <span class="consultant-toggle" onclick="toggleBio(this, 'rashidDBio')">Read Bio</span>
+            <div id="rashidDBio" class="consultant-bio-content mt-2">
+              <p>38 years of expertise in Electro-Mechanical and Hydro-Mechanical Engineering, Bid Processing, Contract Management and Project Certification. Focus on industrial and water treatment plant systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-</div>
-</div>
 
- <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+ <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -340,7 +438,6 @@
                         &copy; <a href="#">2025 NovoTech Consultants</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Company Reg No: <a href="#">U74900JK2014PTC004234</a>
 
                     </div>
@@ -348,17 +445,13 @@
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-<!-- Back to top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-<!-- JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-function toggleBio(el) {
-  const bio = el.nextElementSibling;
+function toggleBio(el, bioId) {
+  const bio = document.getElementById(bioId);
   bio.classList.toggle('open');
   el.textContent = bio.classList.contains('open') ? 'Hide Bio' : 'Read Bio';
 }
